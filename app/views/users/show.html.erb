@@ -1,0 +1,12 @@
+<h2><%= @user.email %></h2>
+<%= link_to '新規登録', new_article_path %>
+<% @user.articles.each do |article| %>
+<p>
+title : <%= article.title %>
+</p>
+<p>
+body : <%= article.body %>
+</p>
+<% end %>
+
+<%= link_to 'ユーザー一覧', users_path %>
